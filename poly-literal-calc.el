@@ -8,7 +8,7 @@
 ;; Keywords: calc, languages
 ;; URL: https://github.com/indigoviolet/poly-literal-calc
 ;; Package-Version: 0.1
-;; Package-Requires: (polymode literal-calc-mode (emacs "24.2"))
+;; Package-Requires: ((polymode "0.2.2") (literal-calc-mode "0.1") (emacs "24.2"))
 ;;
 ;; This file is not part of GNU Emacs.
 ;;
