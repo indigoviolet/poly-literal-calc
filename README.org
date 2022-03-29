@@ -1,0 +1,29 @@
+:DOC-CONFIG:
+#+auto_tangle: nil
+#+title: poly-literate-calc
+#+author: Venky Iyer
+#+email: indigoviolet@gmail.com
+:END:
+
+Goal is to get [[https://github.com/sulami/literate-calc-mode.el][literate-calc]] working in org-src-like blocks within other modes,
+using [[https://polymode.github.io/][Polymode]]
+
+* WIP
+
+- Working: chunking in polymode, with org-mode as host. Switching between major
+  modes as we transition b/w chunks.
+- *Problem*: There is currently leakage of state between the literate-calc chunk
+  and the host chunks, see [[file:test.org][test.org]]
+- TODO: eval-region functions (problem here is that eval-buffer does things
+  line-by-line, would have to rewrite that)
+
+* Usage
+
+#+begin_src emacs-lisp :tangle packages.el
+(package! poly-literate-calc
+  :recipe (:local-repo "lisp/poly-literate-calc" :build (:not compile)));; :host github :repo "indigoviolet/poly-literate-calc"))
+#+end_src
+
+#+begin_src emacs-lisp
+(use-package! poly-literate-calc)
+#+end_src

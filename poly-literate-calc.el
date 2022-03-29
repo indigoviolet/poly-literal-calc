@@ -17,10 +17,11 @@
 ;;
 ;;; Code:
 
+(require 'org-src)
 (require 'literate-calc-mode)
 (require 'polymode)
 
-(define-hostmode poly-literate-calc-hostmode :mode nil)
+(define-hostmode poly-literate-calc-hostmode :mode 'org-mode)
 
 (define-innermode poly-literate-calc-innermode
   :mode 'literate-calc-mode
@@ -31,8 +32,14 @@
 
 ;;;###autoload (autoload 'poly-literate-calc-mode "poly-literate-calc")
 (define-polymode poly-literate-calc-mode
+  nil
+  "Literate calc org mode blocks"
+  :lighter "Lit"
   :hostmode 'poly-literate-calc-hostmode
-  :innermodes '(poly-literate-calc-innermode))
+  :innermodes '(poly-literate-calc-innermode)
+
+  ;;  (setq polymode-eval-region-function #'literate-calc-eval-buffer)
+  )
 
 (provide 'poly-literate-calc)
 

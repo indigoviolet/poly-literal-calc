@@ -1,0 +1,14 @@
+foo = 2 => foo: 2
+
+* Test
+
+bar = bar + 2 => bar: bar + 2
+bar = foo + 3 => bar: 5
+
+#+literate-calc
+bar = bar + 2 => bar: 7
+foo = 1000 => foo: 1,000
+bar = foo + 2 => bar: 1,002
+#+end
+
+bar = foo + 5 => bar: 1,005
