@@ -27,3 +27,8 @@ using [[https://polymode.github.io/][Polymode]]
 #+begin_src emacs-lisp
 (use-package! poly-literate-calc)
 #+end_src
+
+* References
+
+- https://masteringemacs.org/article/polymode-multiple-major-modes-how-to-use-sql-python-in-one-buffer
+- Debugging: https://polymode.github.io/internals/
